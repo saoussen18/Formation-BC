@@ -45,5 +45,30 @@ page 50000 "SK Consultant List"
                 }
             }
         }
+
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action("Import Consultant")
+            {
+                ApplicationArea = all;
+                Image = Import;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                RunObject = xmlport "SK import consultant";
+            }
+            action("Export Consultant")
+            {
+                ApplicationArea = all;
+                Image = Export;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                RunObject = xmlport "SK Export Consultant";
+            }
+        }
     }
 }
